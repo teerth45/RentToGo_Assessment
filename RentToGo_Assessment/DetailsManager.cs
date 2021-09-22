@@ -19,6 +19,20 @@ namespace RentToGo_Assessment
 {
     class DetailsManager
     {
+        public static List<Property> GetPropertyData()
+        {
+            var httpClient = new HttpClient();
+            var response = httpClient.GetStringAsync("http://10.0.2.2:53917/api/Properties");
+            var Property_Data = JsonConvert.DeserializeObject<List<Property>>(response.Result);
+            return Property_Data.ToList();
+        }
+        public static List<Agent> GetAgentData()
+        {
+            var httpClient = new HttpClient();
+            var response = httpClient.GetStringAsync("http://10.0.2.2:53917/api/Agents");
+            var Agent_Data = JsonConvert.DeserializeObject<List<Agent>>(response.Result);
+            return Agent_Data.ToList();
+        }
         public static void registercustomer(string username, string name, string phn, string address, string pass)
         {
             try

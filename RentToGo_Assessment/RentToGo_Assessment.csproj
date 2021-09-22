@@ -62,14 +62,24 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentAdapter.cs" />
+    <Compile Include="AgentProfile.cs" />
+    <Compile Include="CustomerProfile.cs" />
+    <Compile Include="DetailsAdapter.cs" />
     <Compile Include="DetailsManager.cs" />
+    <Compile Include="EditCustomer.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MainPage.cs" />
     <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Property.cs" />
+    <Compile Include="PropertyDetails.cs" />
+    <Compile Include="RealAgentProfile.cs" />
     <Compile Include="Registration.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMS_Activity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -55,13 +55,6 @@ namespace RentToGo_Assessment
 
         private void Btn_AgentOffice_Click(object sender, EventArgs e)
         {
-            //var txtLat = Intent.GetStringExtra("Agent_Office_Location");
-
-            //var address = "920 N. Parish Place, Burbank, CA 91506";
-            //var locationService = new GoogleLocationService();
-            //var point = locationService.GetLatLongFromAddress(address);
-            //var latitude = point.Latitude;
-            //var longitude = point.Longitude;
             var latitude = "37.3861° N";
             var longitude = "122.0839° W";
             var geoUri = Android.Net.Uri.Parse("geo:" + latitude + ", " + longitude);

@@ -43,6 +43,7 @@ namespace RentToGo_Assessment
             Property_item.PutExtra("PropertyId", Property_Item.Id);
             //Toast.MakeText(this, Tutor_Item.Id.ToString(), ToastLength.Long).Show();
             StartActivity(Property_item);
+
         }
     }
 }

@@ -50,6 +50,8 @@ namespace RentToGo_Assessment
             view.FindViewById<TextView>(Resource.Id.propbaths).Text = item.PropertyBath.ToString();
             view.FindViewById<TextView>(Resource.Id.propRent).Text = item.PropertyRent.ToString();
             return view;
+
+
         }
     }
 }

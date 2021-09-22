@@ -23,7 +23,11 @@ namespace RentToGo_Assessment
 
         Button btn_Agent;
         Button btnSMS;
+        Button btnMap;
         ImageView House;
+
+        string latitude;
+        string longitude;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -39,6 +43,7 @@ namespace RentToGo_Assessment
 
             btn_Agent = FindViewById<Button>(Resource.Id.btnviewagent);
             btnSMS = FindViewById<Button>(Resource.Id.btnsharesms);
+            btnMap = FindViewById<Button>(Resource.Id.btnviewmap);
 
             Property_Id = Intent.GetIntExtra("PropertyId", -1); //-1 is default 
             txt_Property_Name.Text = Intent.GetStringExtra("Property_Name");
@@ -47,22 +52,38 @@ namespace RentToGo_Assessment
             txt_Property_Room.Text = Intent.GetStringExtra("Property_Room");
             txt_Property_Bath.Text = Intent.GetStringExtra("Property_Bath");
 
+
             btn_Agent.Click += Btn_Agent_Click;
             btnSMS.Click += BtnSMS_Click;
+            btnMap.Click += BtnMap_Click;
 
             if (txt_Property_Name.Text == "Majestic & Magnificent")
             {
                 House.SetImageResource(Resource.Drawable.house1);
+                latitude = "36.81990 S";
+                longitude = "174.62825 E";
             }
             else if (txt_Property_Name.Text == "Remura Townhouse")
             {
                 House.SetImageResource(Resource.Drawable.house2);
+                latitude = "36.81782 S";
+                longitude = "174.62895 E";
             }
             else if (txt_Property_Name.Text == "Simply Beautiful")
             {
                 House.SetImageResource(Resource.Drawable.house3);
+                latitude = "36.818270 S";
+                longitude = "174.616350 E";
             }
 
+        }
+
+        private void BtnMap_Click(object sender, EventArgs e)
+        {
+                var geoUri = Android.Net.Uri.Parse("geo:" + latitude + ", " + longitude);
+
+                var mapIntent = new Intent(Intent.ActionView, geoUri);
+                StartActivity(mapIntent);
         }
 
         private void BtnSMS_Click(object sender, EventArgs e)

@@ -3897,7 +3897,7 @@ namespace RentToGo_Assessment
 			public const int houserent = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int houserooms = 2131230888;
+			public const int houseroom = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
 			public const int icon = 2131230889;

@@ -13,7 +13,7 @@ using RentToGo_Assessment.Models;
 
 namespace RentToGo_Assessment
 {
-    [Activity(Label = "Login")]
+    [Activity(Label = "Login", MainLauncher = true)]
     public class Login : Activity
     {
         EditText username, password;

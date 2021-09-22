@@ -33,8 +33,9 @@ namespace RentToGo_Assessment
             txt_Property_Name = FindViewById<TextView>(Resource.Id.housename);
             txt_Property_Address = FindViewById<TextView>(Resource.Id.houseaddress);
             txt_Property_Rent = FindViewById<TextView>(Resource.Id.houserent);
-            txt_Property_Room = FindViewById<TextView>(Resource.Id.houserooms);
+            txt_Property_Room = FindViewById<TextView>(Resource.Id.houseroom);
             txt_Property_Bath = FindViewById<TextView>(Resource.Id.housebath);
+            House = FindViewById<ImageView>(Resource.Id.imageView1);
 
             btn_Agent = FindViewById<Button>(Resource.Id.btnviewagent);
             btnSMS = FindViewById<Button>(Resource.Id.btnsharesms);

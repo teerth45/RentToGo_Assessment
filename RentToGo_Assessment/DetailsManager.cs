@@ -74,7 +74,7 @@ namespace RentToGo_Assessment
                 {
                     CustUsername = username,
                     CustName = name,
-                    CustPhnNumber = Int32.Parse(phn),
+                    CustPhnNumber = phn,
                     CustAddress = address,
                     CustPassword = pass
                 };
@@ -90,7 +90,7 @@ namespace RentToGo_Assessment
             }
 
         }
-        public static void editcustomer(string username, string name, int phn, string address, string pass)
+        public static void editcustomer(string username, string name, string phn, string address, string pass)
         {
             try
             {

@@ -17,7 +17,7 @@ namespace RentToGo_Assessment.Models
 
         public string CustName { get; set; }
 
-        public int CustPhnNumber { get; set; }
+        public string CustPhnNumber { get; set; }
 
         public string CustAddress { get; set; }
 

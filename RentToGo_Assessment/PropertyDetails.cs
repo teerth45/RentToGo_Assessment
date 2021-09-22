@@ -24,6 +24,7 @@ namespace RentToGo_Assessment
         Button btn_Agent;
         Button btnSMS;
         Button btnMap;
+        Button btnBluetooth;
         ImageView House;
 
         string latitude;
@@ -44,6 +45,7 @@ namespace RentToGo_Assessment
             btn_Agent = FindViewById<Button>(Resource.Id.btnviewagent);
             btnSMS = FindViewById<Button>(Resource.Id.btnsharesms);
             btnMap = FindViewById<Button>(Resource.Id.btnviewmap);
+            btnBluetooth = FindViewById<Button>(Resource.Id.btnsharebluetooth);
 
             Property_Id = Intent.GetIntExtra("PropertyId", -1); //-1 is default 
             txt_Property_Name.Text = Intent.GetStringExtra("Property_Name");
@@ -56,6 +58,7 @@ namespace RentToGo_Assessment
             btn_Agent.Click += Btn_Agent_Click;
             btnSMS.Click += BtnSMS_Click;
             btnMap.Click += BtnMap_Click;
+            btnBluetooth.Click += BtnBluetooth_Click;
 
             if (txt_Property_Name.Text == "Majestic & Magnificent")
             {
@@ -78,6 +81,11 @@ namespace RentToGo_Assessment
 
         }
 
+        private void BtnBluetooth_Click(object sender, EventArgs e)
+        {
+            Toast.MakeText(this, "The property details are shared via Bluetooth", ToastLength.Long).Show();
+        }
+
         private void BtnMap_Click(object sender, EventArgs e)
         {
                 var geoUri = Android.Net.Uri.Parse("geo:" + latitude + ", " + longitude);
@@ -88,10 +96,11 @@ namespace RentToGo_Assessment
 
         private void BtnSMS_Click(object sender, EventArgs e)
         {
-            var smsUri = Android.Net.Uri.Parse("smsto:8015275711");
+
+            var smsUri = Android.Net.Uri.Parse("smsto:12345");
             var smsIntent = new Intent(Intent.ActionSendto, smsUri);
             var ADDRESS = Intent.GetStringExtra("Property_Address");
-            smsIntent.PutExtra("sms_body", $"Hi, I am interested in the house at{ADDRESS} you have posted for rent.Could I please have more details ?");
+            smsIntent.PutExtra("sms_body", $"Hi, I am interested in the house at {ADDRESS} you have posted for rent.Could I please have more details ?");
             StartActivity(smsIntent);
 
         }

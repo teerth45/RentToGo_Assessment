@@ -29,6 +29,26 @@ namespace RentToGo_Assessment
             PropertyList.Adapter = new DetailsAdapter(this, myList);
             PropertyList.ItemClick += PropertyList_ItemClick;
         }
+        //Adds Add to the Menu in the top right of your screen.
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            menu.Add("Customer Profile");
+            return base.OnPrepareOptionsMenu(menu);
+        }
+
+        //When you choose Add from the Menu run the Add Activity. Good to know to add more options
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            var itemTitle = item.TitleFormatted.ToString();
+
+            switch (itemTitle)
+            {
+                case "Customer Profile":
+                    StartActivity(typeof(CustomerProfile));
+                    break;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
 
 
         private void PropertyList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

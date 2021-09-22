@@ -62,10 +62,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddProperty_Activity.cs" />
     <Compile Include="AgentAdapter.cs" />
     <Compile Include="AgentProfile.cs" />
-    <Compile Include="CustomerAdapter.cs" />
     <Compile Include="CustomerProfile.cs" />
     <Compile Include="DetailsAdapter.cs" />
     <Compile Include="DetailsManager.cs" />
@@ -180,11 +178,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\PropertyDetails.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\AddProperty.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

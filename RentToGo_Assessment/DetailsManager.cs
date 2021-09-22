@@ -42,14 +42,14 @@ namespace RentToGo_Assessment
                     PropertyName= Propertyname,
                     PropertyRent = Int32.Parse(WeeklyRent),
                     PropertyRoom = Int32.Parse(Bedrooms),
-                    Property_Number_of_Bathrooms = Bathrooms,
-                    Property_Location = Location
+                    PropertyBath = Int32.Parse(Bathrooms),
+                    PropertyAddress = Location
                 };
                 var httpClient = new HttpClient();
                 var Json = JsonConvert.SerializeObject(Property_Obj);
                 HttpContent httpContent = new StringContent(Json);
                 httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/Json");
-                httpClient.PostAsync(string.Format("http://10.0.2.2:33869/api/Properties"), httpContent);
+                httpClient.PostAsync(string.Format("http://10.0.2.2:53917/api/Properties"), httpContent);
 
 
 

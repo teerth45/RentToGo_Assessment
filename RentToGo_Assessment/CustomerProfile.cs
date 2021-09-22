@@ -22,12 +22,6 @@ namespace RentToGo_Assessment
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.activity_main);
-
-            CustomerList = FindViewById<ListView>(Resource.Id.listView1);
-            myCustomerlist = DetailsManager.GetCustomerData();
-            CustomerList.Adapter = new DetailsAdapter(this, myCustomerlist);
-            CustomerList.ItemClick += PropertyList_ItemClick;
         }
     }
 }

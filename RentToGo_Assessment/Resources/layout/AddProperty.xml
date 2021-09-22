@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/housename"
+        android:hint="House name"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:layout_weight="0.01"
+        android:textColor="@android:color/background_dark" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weeklyrent"
+        android:hint="weekly rent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:layout_weight="0.01"
+        android:textColor="@android:color/background_dark" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberofbedrooms"
+        android:hint="the number of bedrooms"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:layout_weight="0.01"
+        android:textColor="@android:color/background_dark" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberofbathrooms"
+        android:hint="the number of bathrooms"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:layout_weight="0.01"
+        android:textColor="@android:color/background_dark" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PropertyLocation "
+        android:hint="Property_Location"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_margin="2dp"
+        android:layout_weight="0.01"
+        android:textColor="@android:color/background_dark" />
+    <Button
+        android:text="@string/Add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAdd"
+        android:layout_margin="5dp"
+        android:layout_weight="0.05"/>
+</LinearLayout>

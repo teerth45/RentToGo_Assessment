@@ -19,12 +19,45 @@ namespace RentToGo_Assessment
 {
     class DetailsManager
     {
+        public static List<Customer> GetCustomerData()
+        {
+            var httpClient = new HttpClient();
+            var response = httpClient.GetStringAsync("http://10.0.2.2:53917/api/Customers");
+            var Customer_Data = JsonConvert.DeserializeObject<List<Customer>>(response.Result);
+            return Customer_Data.ToList();
+        }
         public static List<Property> GetPropertyData()
         {
             var httpClient = new HttpClient();
             var response = httpClient.GetStringAsync("http://10.0.2.2:53917/api/Properties");
             var Property_Data = JsonConvert.DeserializeObject<List<Property>>(response.Result);
             return Property_Data.ToList();
+        }
+        public static void AddProperty(string Propertyname,string WeeklyRent, string Bedrooms, string Bathrooms, string Location)
+        {
+            try
+            {
+                Property Property_Obj = new Property
+                {
+                    PropertyName= Propertyname,
+                    PropertyRent = Int32.Parse(WeeklyRent),
+                    PropertyRoom = Int32.Parse(Bedrooms),
+                    Property_Number_of_Bathrooms = Bathrooms,
+                    Property_Location = Location
+                };
+                var httpClient = new HttpClient();
+                var Json = JsonConvert.SerializeObject(Property_Obj);
+                HttpContent httpContent = new StringContent(Json);
+                httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/Json");
+                httpClient.PostAsync(string.Format("http://10.0.2.2:33869/api/Properties"), httpContent);
+
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Insert Property Data Error " + e.Message);
+            }
         }
         public static List<Agent> GetAgentData()
         {

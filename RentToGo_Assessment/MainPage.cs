@@ -30,6 +30,26 @@ namespace RentToGo_Assessment
             PropertyList.ItemClick += PropertyList_ItemClick;
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            menu.Add("Add Property");
+            return base.OnPrepareOptionsMenu(menu);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            var itemTitle = item.TitleFormatted.ToString();
+
+
+
+            switch (itemTitle)
+            {
+                case "Add Property":
+                    StartActivity(typeof(AddProperty_Activity));
+                    break;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+
         private void PropertyList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var Property_Item = myList[e.Position];

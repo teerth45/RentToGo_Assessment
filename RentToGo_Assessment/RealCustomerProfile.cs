@@ -19,6 +19,7 @@ namespace RentToGo_Assessment
         TextView Customer_Username;
         TextView Customer_Phone;
         TextView Customer_Address;
+        TextView Customer_Password;
 
         Button btn_Edit_Cust;
         Button btn_cust_SMS;
@@ -35,6 +36,7 @@ namespace RentToGo_Assessment
             Customer_Username = FindViewById<TextView>(Resource.Id.custusrname);
             Customer_Phone = FindViewById<TextView>(Resource.Id.custphnnumber);
             Customer_Address = FindViewById<TextView>(Resource.Id.custaddress);
+            Customer_Password = FindViewById<TextView>(Resource.Id.cust_password);
 
             btn_Edit_Cust = FindViewById<Button>(Resource.Id.btneditcustprofile);
             btn_cust_SMS = FindViewById<Button>(Resource.Id.custsms);
@@ -44,6 +46,7 @@ namespace RentToGo_Assessment
             Customer_Name.Text = Intent.GetStringExtra("Customer_Name");
             Customer_Phone.Text = Intent.GetStringExtra("Customer_Phone");
             Customer_Address.Text = Intent.GetStringExtra("Customer_Address");
+            Customer_Password.Text = Intent.GetStringExtra("CustomerPassword");
 
             btn_Edit_Cust.Click += Btn_Edit_Cust_Click;
             btn_cust_SMS.Click += Btn_cust_SMS_Click;

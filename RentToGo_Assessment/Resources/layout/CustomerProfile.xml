@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Details"
+             android:textAlignment="center"
+        android:textSize="28sp"
+        android:layout_margin="15dp" 
+             android:id="@+id/textview3"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">        
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Name: "
+            android:layout_margin="3dp"
+            android:paddingLeft="14dip"
+            android:id="@+id/cust_name"/>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:layout_margin="3dp"  
+            android:id="@+id/custname"/>
+        </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">   
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Username: "
+            android:layout_margin="3dp"
+            android:paddingLeft="14dip"
+            android:id="@+id/cust_usrname"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:layout_margin="3dp"    
+            android:id="@+id/custusrname"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"> 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number: "
+            android:layout_margin="3dp"
+            android:paddingLeft="14dip"
+            android:id="@+id/cust_phnnumber"/>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="phn number"
+            android:layout_margin="3dp"    
+            android:id="@+id/custphnnumber"/>
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"> 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address: "
+            android:layout_margin="3dp"
+            android:paddingLeft="14dip"
+            android:id="@+id/cust_address"/>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="address"
+            android:layout_margin="3dp"    
+            android:id="@+id/custaddress"/>
+            </LinearLayout>
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"> 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Password:"
+            android:layout_margin="3dp"
+            android:paddingLeft="14dip"
+            android:id="@+id/usr_pswrd"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="password"
+            android:layout_margin="3dp"
+            android:id="@+id/cust_password"/>
+                </LinearLayout>
+    <Button
+            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:text="Edit Profile"
+        android:layout_gravity="center_horizontal"
+            android:id="@+id/btneditcustprofile"/>
+    <Button
+        
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Share my details via SMS"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/custsms"/>
+      <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Share my details via Bluetooth"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/custbluetooth"/>
+</LinearLayout>
+

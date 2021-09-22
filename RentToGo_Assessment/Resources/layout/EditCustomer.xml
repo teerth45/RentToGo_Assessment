@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit your Details"
+             android:textAlignment="center"
+                android:textSize="28sp"
+        android:layout_margin="15dp" 
+             android:id="@+id/textview4"/>
+        
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Name: "
+            android:paddingLeft="16dip"
+        android:textSize="15sp"
+            android:id="@+id/name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+            android:id="@+id/editcustname"/> 
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username: "
+            android:paddingLeft="16dip"
+        android:textSize="15sp"
+            android:id="@+id/editcust_usrname"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user username"
+        android:layout_margin="10dp"
+        android:paddingLeft="16dip"
+        android:id="@+id/editcustusername"
+        android:textColor="@android:color/holo_red_light" />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number: "
+            android:paddingLeft="16dip"
+        android:textSize="15sp"
+            android:id="@+id/editcust_phnn"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+            android:id="@+id/editcustphn"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address: "
+            android:paddingLeft="16dip"
+        android:textSize="15sp"
+            android:id="@+id/editcust_address"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+            android:id="@+id/editcustaddress"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:paddingLeft="16dip"
+        android:textSize="15sp"
+            android:id="@+id/editcust_password"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user password"
+        android:paddingLeft="16dip"
+        android:layout_margin="10dp"
+        android:id="@+id/editcustpassword"
+        android:textColor="@android:color/holo_red_light" />
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Make Changes!!!"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.05"
+        android:id="@+id/btnmakeedit"/>
+
+
+
+</LinearLayout>
+
+

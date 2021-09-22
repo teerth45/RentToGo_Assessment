@@ -31,8 +31,6 @@ namespace RentToGo_Assessment
             CustomerPassword= FindViewById<TextView>(Resource.Id.editcustpassword);
 
             btnedit = FindViewById<Button>(Resource.Id.btnmakeedit);
-            btncustsms = FindViewById<Button>(Resource.Id.custsms);
-            btncustbluetooth = FindViewById<Button>(Resource.Id.custbluetooth);
 
             btnedit.Click += OnEditClick;
 
@@ -52,7 +50,7 @@ namespace RentToGo_Assessment
                 DetailsManager.editcustomer(CustUsername, CustName.Text, CustPhn.Text, CustAddress.Text, CustPassword);
                 Toast.MakeText(this, "Details Updated", ToastLength.Long).Show();
                 this.Finish();
-                StartActivity(typeof(EditCustomer));
+                StartActivity(typeof(Login));
             }
             else
             {

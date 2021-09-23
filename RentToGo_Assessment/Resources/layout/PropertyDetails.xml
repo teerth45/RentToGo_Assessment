@@ -23,55 +23,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="18dip"
             android:id="@+id/houseaddress" />
-           <TextView
-            android:text="Details"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:paddingTop="20dip"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:id="@+id/details" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
- <TextView
-            android:text="Rent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="17dip"
-            android:id="@+id/lblRent"></TextView>
-        <TextView
-            android:text="$actr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="7dip"
-            android:id="@+id/houserent"/>
-        <TextView
-            android:text="Rooms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="45dip"
-            android:id="@+id/lblRooms"></TextView>
-        <TextView
-            android:text="actrroms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="7dip"
-            android:id="@+id/houseroom"></TextView>
-        <TextView
-            android:text="Bath"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="45dip"
-            android:id="@+id/lblbath"></TextView>
-        <TextView
-            android:text="actbath"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="7dip"
-            android:id="@+id/housebath"></TextView>
-        </LinearLayout>
+
         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

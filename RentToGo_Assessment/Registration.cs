@@ -33,7 +33,7 @@ namespace RentToGo_Assessment
         }
         public void OnRegClick(object sender, EventArgs e)
         {
-            if (name.Text != "" || phnnumber.Text != "" || username.Text != "" || address.Text != "" || password.Text != "")
+            if (name.Text != "" && phnnumber.Text != "" && username.Text != "" && address.Text != "" && password.Text != "")
             {
                 //string username, string name,  int phn, string address, string pas
                 DetailsManager.registercustomer(username.Text, name.Text, phnnumber.Text, address.Text, password.Text);

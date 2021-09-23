@@ -33,6 +33,7 @@ namespace RentToGo_Assessment
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             menu.Add("Customer Profile");
+            menu.Add("Logout");
             return base.OnPrepareOptionsMenu(menu);
         }
 
@@ -45,6 +46,9 @@ namespace RentToGo_Assessment
             {
                 case "Customer Profile":
                     StartActivity(typeof(CustomerProfile));
+                    break;
+                case "Logout":
+                    StartActivity(typeof(Login));
                     break;
             }
             return base.OnOptionsItemSelected(item);

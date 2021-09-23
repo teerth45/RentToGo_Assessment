@@ -37,9 +37,6 @@ namespace RentToGo_Assessment
             // Create your application here
             txt_Property_Name = FindViewById<TextView>(Resource.Id.housename);
             txt_Property_Address = FindViewById<TextView>(Resource.Id.houseaddress);
-            txt_Property_Rent = FindViewById<TextView>(Resource.Id.houserent);
-            txt_Property_Room = FindViewById<TextView>(Resource.Id.houseroom);
-            txt_Property_Bath = FindViewById<TextView>(Resource.Id.housebath);
             House = FindViewById<ImageView>(Resource.Id.imageView1);
 
             btn_Agent = FindViewById<Button>(Resource.Id.btnviewagent);
@@ -50,9 +47,9 @@ namespace RentToGo_Assessment
             Property_Id = Intent.GetIntExtra("PropertyId", -1); //-1 is default 
             txt_Property_Name.Text = Intent.GetStringExtra("Property_Name");
             txt_Property_Address.Text = Intent.GetStringExtra("Property_Address");
-            txt_Property_Rent.Text = Intent.GetStringExtra("Property_Rent");
-            txt_Property_Room.Text = Intent.GetStringExtra("Property_Room");
-            txt_Property_Bath.Text = Intent.GetStringExtra("Property_Bath");
+            //txt_Property_Rent.Text = Intent.GetStringExtra("Property_Rent");
+            //txt_Property_Room.Text = Intent.GetStringExtra("Property_Room");
+            //txt_Property_Bath.Text = Intent.GetStringExtra("Property_Bath");
 
 
             btn_Agent.Click += Btn_Agent_Click;
@@ -71,7 +68,7 @@ namespace RentToGo_Assessment
                 House.SetImageResource(Resource.Drawable.house2);
                 latitude = "36.81782 S";
                 longitude = "174.62895 E";
-            }
+            }    
             else if (txt_Property_Name.Text == "Simply Beautiful")
             {
                 House.SetImageResource(Resource.Drawable.house3);

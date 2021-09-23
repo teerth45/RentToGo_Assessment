@@ -15,8 +15,9 @@ namespace RentToGo_Assessment
     public class EditCustomer : Activity
     {
         string CustUsername, CustPassword;
-        TextView CustName, CustPhn, CustAddress,CustomerUsername, CustomerPassword;
-        Button btnedit, btncustsms, btncustbluetooth;
+        EditText CustName, CustPhn, CustAddress;
+        TextView CustomerUsername, CustomerPassword;
+        Button btnedit;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -24,9 +25,9 @@ namespace RentToGo_Assessment
             // Create your application here
             SetContentView(Resource.Layout.EditCustomer);
 
-            CustName = FindViewById<TextView>(Resource.Id.editcustname);
-            CustPhn = FindViewById<TextView>(Resource.Id.editcustphn);
-            CustAddress = FindViewById<TextView>(Resource.Id.editcustaddress);
+            CustName = FindViewById<EditText>(Resource.Id.editcustname);
+            CustPhn = FindViewById<EditText>(Resource.Id.editcustphn);
+            CustAddress = FindViewById<EditText>(Resource.Id.editcustaddress);
             CustomerUsername= FindViewById<TextView>(Resource.Id.editcustusername);
             CustomerPassword= FindViewById<TextView>(Resource.Id.editcustpassword);
 
